@@ -1,0 +1,102 @@
+# Compose Deploy Specification: https://docs.docker.com/reference/compose-file/deploy/
+# Using values from https://github.com/GoogleCloudPlatform/microservices-demo/blob/release/v0.3.9/kubernetes-manifests/
+service:
+  adservice:
+    deploy:
+      resources:
+        limits:
+          cpus: "0.30"
+          memory: 300M
+        reservations:
+          cpus: "0.30"
+          memory: 300M
+
+  cartservice:
+    deploy:
+      resources:
+        limits:
+          cpus: "0.30"
+          memory: 128M
+        reservations:
+          cpus: "0.30"
+          memory: 128M
+
+  checkoutservice:
+    deploy:
+      resources:
+        limits:
+          cpus: "0.20"
+          memory: 128M
+        reservations:
+          cpus: "0.20"
+          memory: 128M
+
+  currencyservice:
+    deploy:
+      resources:
+        limits:
+          cpus: "0.20"
+          memory: 128M
+        reservations:
+          cpus: "0.20"
+          memory: 128M
+
+  emailservice:
+    deploy:
+      resources:
+        limits:
+          cpus: "0.20"
+          memory: 128M
+        reservations:
+          cpus: "0.20"
+          memory: 128M
+
+  paymentservice:
+    deploy:
+      resources:
+        limits:
+          cpus: "0.20"
+          memory: 128M
+        reservations:
+          cpus: "0.20"
+          memory: 128M
+
+  productcatalogservice:
+    deploy:
+      resources:
+        limits:
+          cpus: "0.20"
+          memory: 128M
+        reservations:
+          cpus: "0.20"
+          memory: 128M
+
+  recommendationservice:
+    deploy:
+      resources:
+        limits:
+          cpus: "0.20"
+          memory: 450M
+        reservations:
+          cpus: "0.20"
+          memory: 450M
+
+  redis:
+    deploy:
+      resources:
+        limits:
+          cpus: "0.125"
+          memory: 256M
+        reservations:
+          cpus: "0.125"
+          memory: 256M
+
+  shippingservice:
+    deploy:
+      resources:
+        limits:
+          cpus: "0.20"
+          memory: 128M
+        reservations:
+          cpus: "0.20"
+          memory: 128M

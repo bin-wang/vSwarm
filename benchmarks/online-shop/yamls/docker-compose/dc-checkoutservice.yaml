@@ -20,6 +20,14 @@ services:
       - DISABLE_TRACING=true
     ports:
     - target: 5050
+    deploy:
+      resources:
+        limits:
+          cpus: "0.20"
+          memory: 128M
+        reservations:
+          cpus: "0.20"
+          memory: 128M
     depends_on:
       - shippingservice
       - productcatalogservice
@@ -41,6 +49,14 @@ services:
       - DISABLE_TRACING=true
     ports:
     - target: 50051
+    deploy:
+      resources:
+        limits:
+          cpus: "0.20"
+          memory: 128M
+        reservations:
+          cpus: "0.20"
+          memory: 128M
 
   productcatalogservice:
     image: vhiveease/onlineshop-productcatalogservice:latest
@@ -55,6 +71,14 @@ services:
       - DISABLE_TRACING=true
     ports:
     - target: 3550
+    deploy:
+      resources:
+        limits:
+          cpus: "0.20"
+          memory: 128M
+        reservations:
+          cpus: "0.20"
+          memory: 128M
 
   cartservice:
     image: vhiveease/onlineshop-cartservice:latest
@@ -69,6 +93,14 @@ services:
       - DISABLE_TRACING=true
     ports:
     - target: 7070
+    deploy:
+      resources:
+        limits:
+          cpus: "0.30"
+          memory: 128M
+        reservations:
+          cpus: "0.30"
+          memory: 128M
 
 
   currencyservice:
@@ -84,6 +116,14 @@ services:
       - DISABLE_TRACING=true
     ports:
     - target: 7000
+    deploy:
+      resources:
+        limits:
+          cpus: "0.20"
+          memory: 128M
+        reservations:
+          cpus: "0.20"
+          memory: 128M
 
   emailservice:
     image: vhiveease/onlineshop-emailservice:latest
@@ -97,6 +137,14 @@ services:
       - DISABLE_TRACING=true
     ports:
     - target: 8080
+    deploy:
+      resources:
+        limits:
+          cpus: "0.20"
+          memory: 128M
+        reservations:
+          cpus: "0.20"
+          memory: 128M
 
   paymentservice:
     image: vhiveease/onlineshop-paymentservice:latest
@@ -111,6 +159,14 @@ services:
       - DISABLE_TRACING=true
     ports:
     - target: 50051
+    deploy:
+      resources:
+        limits:
+          cpus: "0.20"
+          memory: 128M
+        reservations:
+          cpus: "0.20"
+          memory: 128M
 
   relay:
     image: vhiveease/relay:latest

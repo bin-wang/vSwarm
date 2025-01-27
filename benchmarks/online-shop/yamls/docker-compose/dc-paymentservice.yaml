@@ -14,6 +14,14 @@ services:
       - DISABLE_TRACING=true
     ports:
     - target: 50051
+    deploy:
+      resources:
+        limits:
+          cpus: "0.20"
+          memory: 128M
+        reservations:
+          cpus: "0.20"
+          memory: 128M
 
   relay:
     image: vhiveease/relay:latest

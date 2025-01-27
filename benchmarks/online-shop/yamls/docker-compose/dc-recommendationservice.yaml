@@ -17,6 +17,14 @@ services:
     - target: 8080
     depends_on:
       - productcatalogservice
+    deploy:
+      resources:
+        limits:
+          cpus: "0.20"
+          memory: 450M
+        reservations:
+          cpus: "0.20"
+          memory: 450M
 
   productcatalogservice:
     image: vhiveease/onlineshop-productcatalogservice:latest
@@ -31,6 +39,14 @@ services:
       - DISABLE_TRACING=true
     ports:
     - target: 3550
+    deploy:
+      resources:
+        limits:
+          cpus: "0.20"
+          memory: 128M
+        reservations:
+          cpus: "0.20"
+          memory: 128M
 
   relay:
     image: vhiveease/relay:latest

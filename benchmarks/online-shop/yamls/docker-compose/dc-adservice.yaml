@@ -15,6 +15,14 @@ services:
     ports:
     - published: 9555
       target: 9555
+    deploy:
+      resources:
+        limits:
+          cpus: "0.30"
+          memory: 300M
+        reservations:
+          cpus: "0.30"
+          memory: 300M
 
 
   relay:
